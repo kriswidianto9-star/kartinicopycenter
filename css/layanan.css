@@ -1,0 +1,1165 @@
+/* =========================
+   SERVICE HERO
+========================= */
+
+.service-detail-hero {
+    min-height: 760px;
+
+    padding: 80px 8vw;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 40px;
+
+    overflow: hidden;
+}
+
+
+.service-detail-copy {
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.service-detail-copy h1 {
+    margin-top: 25px;
+
+    font-family: "Space Grotesk";
+
+    font-size: clamp(65px, 8vw, 115px);
+
+    line-height: 0.84;
+
+    letter-spacing: -7px;
+
+    font-weight: 600;
+}
+
+
+.service-detail-copy h1 span {
+    display: block;
+
+    color: #777;
+}
+
+
+.service-detail-copy > p {
+    max-width: 480px;
+
+    margin-top: 35px;
+
+    color: #777;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.service-hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+/* =========================
+   3D SHOWCASE
+========================= */
+
+.showcase-3d {
+    width: min(55vw, 700px);
+
+    height: 600px;
+
+    position: relative;
+
+    perspective: 1200px;
+
+    transform-style: preserve-3d;
+}
+
+
+.showcase-shadow {
+    position: absolute;
+
+    width: 65%;
+
+    height: 15%;
+
+    left: 18%;
+
+    bottom: 12%;
+
+    background: rgba(0,0,0,.16);
+
+    border-radius: 50%;
+
+    filter: blur(25px);
+
+    transform:
+        rotateX(70deg);
+
+    animation: shadowFloat 5s ease-in-out infinite;
+}
+
+
+@keyframes shadowFloat {
+
+    0%,
+    100% {
+        transform:
+            rotateX(70deg)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            rotateX(70deg)
+            scale(.8);
+    }
+
+}
+
+
+/* =========================
+   3D BOOK
+========================= */
+
+.showcase-book {
+    position: absolute;
+
+    width: 250px;
+
+    height: 350px;
+
+    left: 35%;
+
+    top: 18%;
+
+    transform-style: preserve-3d;
+
+    transform:
+        rotateX(8deg)
+        rotateY(-25deg)
+        rotateZ(-5deg);
+
+    animation:
+        bookFloat 6s ease-in-out infinite;
+
+    z-index: 5;
+}
+
+
+@keyframes bookFloat {
+
+    0%,
+    100% {
+        transform:
+            rotateX(8deg)
+            rotateY(-25deg)
+            rotateZ(-5deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotateX(8deg)
+            rotateY(-20deg)
+            rotateZ(-3deg)
+            translateY(-22px);
+    }
+
+}
+
+
+.book-front {
+    position: absolute;
+
+    inset: 0;
+
+    background: #222;
+
+    color: white;
+
+    border-radius: 5px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    box-shadow:
+        30px 35px 70px rgba(0,0,0,.2);
+
+    transform:
+        translateZ(25px);
+}
+
+
+.book-logo {
+    width: 45px;
+
+    height: 45px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 2px solid #777;
+
+    border-radius: 50%;
+
+    font-family: "Space Grotesk";
+
+    font-weight: 700;
+}
+
+
+.book-name {
+    font-family: "Space Grotesk";
+
+    font-size: 35px;
+
+    line-height: .9;
+
+    letter-spacing: -2px;
+
+    font-weight: 600;
+}
+
+
+.book-small {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: #888;
+}
+
+
+/* PAGES */
+
+.book-pages-3d {
+    position: absolute;
+
+    width: 235px;
+
+    height: 330px;
+
+    top: 10px;
+
+    right: -5px;
+
+    background: #e7e3da;
+
+    transform:
+        translateZ(0);
+
+    z-index: -1;
+
+    box-shadow:
+        15px 15px 30px rgba(0,0,0,.1);
+}
+
+
+.book-pages-3d span {
+    position: absolute;
+
+    right: 0;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #c7c3ba;
+}
+
+
+.book-pages-3d span:nth-child(1) {
+    top: 25%;
+}
+
+
+.book-pages-3d span:nth-child(2) {
+    top: 45%;
+}
+
+
+.book-pages-3d span:nth-child(3) {
+    top: 65%;
+}
+
+
+.book-pages-3d span:nth-child(4) {
+    top: 85%;
+}
+
+
+/* SPINE */
+
+.book-spine {
+    position: absolute;
+
+    width: 50px;
+
+    height: 350px;
+
+    left: -25px;
+
+    top: 0;
+
+    background: #171717;
+
+    transform:
+        rotateY(90deg)
+        translateZ(25px);
+
+    transform-origin: right center;
+
+    color: #777;
+
+    display: grid;
+
+    place-items: center;
+
+    writing-mode: vertical-rl;
+
+    letter-spacing: 3px;
+
+    font-size: 9px;
+}
+
+
+/* =========================
+   SPIRAL
+========================= */
+
+.spiral-object {
+    position: absolute;
+
+    width: 180px;
+
+    height: 250px;
+
+    left: 5%;
+
+    top: 45%;
+
+    transform:
+        rotateZ(-12deg)
+        rotateY(25deg);
+
+    z-index: 8;
+
+    animation:
+        spiralFloat 5s ease-in-out infinite;
+}
+
+
+@keyframes spiralFloat {
+
+    0%,
+    100% {
+        transform:
+            rotateZ(-12deg)
+            rotateY(25deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotateZ(-8deg)
+            rotateY(25deg)
+            translateY(-15px);
+    }
+
+}
+
+
+.spiral-pages {
+    position: absolute;
+
+    inset: 0;
+
+    background: #fff;
+
+    border-radius: 3px;
+
+    box-shadow:
+        20px 25px 40px rgba(0,0,0,.14);
+}
+
+
+.spiral-pages span {
+    position: absolute;
+
+    left: 18px;
+
+    width: 8px;
+
+    height: 8px;
+
+    border: 2px solid #333;
+
+    border-radius: 50%;
+}
+
+
+.spiral-pages span:nth-child(1) {
+    top: 50px;
+}
+
+
+.spiral-pages span:nth-child(2) {
+    top: 120px;
+}
+
+
+.spiral-pages span:nth-child(3) {
+    top: 190px;
+}
+
+
+.spiral-rings {
+    position: absolute;
+
+    left: -5px;
+
+    top: 30px;
+
+    height: 200px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.spiral-rings i {
+    display: block;
+
+    width: 30px;
+
+    height: 15px;
+
+    border: 4px solid #333;
+
+    border-left: 0;
+
+    border-radius: 0 15px 15px 0;
+
+    transform:
+        rotate(-5deg);
+}
+
+
+/* =========================
+   STAMP
+========================= */
+
+.stamp-object-3d {
+    position: absolute;
+
+    right: 8%;
+
+    bottom: 12%;
+
+    width: 130px;
+
+    height: 230px;
+
+    transform:
+        rotateZ(8deg)
+        rotateY(-15deg);
+
+    z-index: 10;
+
+    animation:
+        stampFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes stampFloat {
+
+    0%,
+    100% {
+        transform:
+            rotateZ(8deg)
+            rotateY(-15deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotateZ(5deg)
+            rotateY(-15deg)
+            translateY(-18px);
+    }
+
+}
+
+
+.stamp-head {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 120px;
+
+    height: 65px;
+
+    background: #222;
+
+    color: white;
+
+    border-radius: 15px 15px 8px 8px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-family: "Space Grotesk";
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    box-shadow:
+        15px 20px 30px rgba(0,0,0,.2);
+}
+
+
+.stamp-handle {
+    position: absolute;
+
+    width: 70px;
+
+    height: 145px;
+
+    left: 25px;
+
+    top: 0;
+
+    background: #333;
+
+    border-radius:
+        35px 35px 15px 15px;
+
+    box-shadow:
+        12px 15px 30px rgba(0,0,0,.15);
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner-object-3d {
+    position: absolute;
+
+    right: 0;
+
+    top: 8%;
+
+    width: 240px;
+
+    height: 150px;
+
+    transform:
+        perspective(500px)
+        rotateY(-15deg)
+        rotateZ(5deg);
+
+    z-index: 3;
+
+    animation:
+        bannerFloat 5s ease-in-out infinite;
+}
+
+
+@keyframes bannerFloat {
+
+    0%,
+    100% {
+        transform:
+            perspective(500px)
+            rotateY(-15deg)
+            rotateZ(5deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            perspective(500px)
+            rotateY(-5deg)
+            rotateZ(2deg)
+            translateY(-15px);
+    }
+
+}
+
+
+.banner-cloth {
+    width: 230px;
+
+    height: 120px;
+
+    background: #222;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: "Space Grotesk";
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    box-shadow:
+        20px 25px 45px rgba(0,0,0,.15);
+}
+
+
+.banner-cloth small {
+    margin-top: 5px;
+
+    font-family: "DM Sans";
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+
+    color: #888;
+}
+
+
+.banner-pole {
+    position: absolute;
+
+    width: 5px;
+
+    height: 145px;
+
+    right: -8px;
+
+    top: 0;
+
+    background: #777;
+}
+
+
+/* =========================
+   SERVICE STRIP
+========================= */
+
+.service-strip {
+    width: 110%;
+
+    margin-left: -5%;
+
+    transform: rotate(1deg);
+
+    overflow: hidden;
+
+    background: #151515;
+
+    color: white;
+
+    padding: 22px 0;
+}
+
+
+.service-strip-inner {
+    width: max-content;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    animation:
+        serviceScroll 25s linear infinite;
+}
+
+
+.service-strip-inner span {
+    font-family: "Space Grotesk";
+
+    font-size: 23px;
+
+    font-weight: 600;
+}
+
+
+.service-strip-inner b {
+    color: #777;
+}
+
+
+@keyframes serviceScroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================
+   ALL SERVICES
+========================= */
+
+.all-services {
+    padding: 160px 8vw;
+}
+
+
+.service-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 50px;
+}
+
+
+.service-heading h2 {
+    margin-top: 20px;
+
+    font-family: "Space Grotesk";
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: .9;
+
+    letter-spacing: -5px;
+}
+
+
+.service-heading > p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* LIST */
+
+.detail-list {
+    margin-top: 70px;
+
+    border-top: 1px solid #ccc8bf;
+}
+
+
+.detail-item {
+    min-height: 180px;
+
+    padding: 30px 0;
+
+    display: grid;
+
+    grid-template-columns: 70px 70px 1fr auto;
+
+    align-items: center;
+
+    gap: 30px;
+
+    border-bottom: 1px solid #ccc8bf;
+
+    transition:
+        padding .4s,
+        background .4s;
+}
+
+
+.detail-item:hover {
+    padding-left: 20px;
+
+    padding-right: 20px;
+
+    background: #e9e6de;
+}
+
+
+.detail-number {
+    font-family: "Space Grotesk";
+
+    font-size: 12px;
+
+    color: #999;
+}
+
+
+.detail-icon {
+    font-family: "Space Grotesk";
+
+    font-size: 38px;
+}
+
+
+.detail-content h3 {
+    font-family: "Space Grotesk";
+
+    font-size: 28px;
+
+    letter-spacing: -1px;
+}
+
+
+.detail-content p {
+    margin-top: 8px;
+
+    max-width: 550px;
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.detail-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 14px;
+}
+
+
+.detail-tags span {
+    padding: 6px 10px;
+
+    border: 1px solid #c5c0b6;
+
+    border-radius: 100px;
+
+    font-size: 9px;
+
+    color: #777;
+}
+
+
+.detail-button {
+    width: 48px;
+
+    height: 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid #aaa;
+
+    border-radius: 50%;
+
+    font-size: 0;
+
+    transition: .3s;
+}
+
+
+.detail-button::before {
+    content: "↗";
+
+    font-size: 16px;
+}
+
+
+.detail-item:hover .detail-button {
+    background: #151515;
+
+    color: white;
+
+    border-color: #151515;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.service-cta {
+    padding: 110px 8vw;
+
+    background: #dedad0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+.service-cta h2 {
+    margin-top: 20px;
+
+    font-family: "Space Grotesk";
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    line-height: .88;
+
+    letter-spacing: -5px;
+}
+
+
+.service-cta h2 span {
+    display: block;
+
+    color: #777;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .service-detail-hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 60px;
+    }
+
+
+    .service-detail-copy {
+        text-align: center;
+    }
+
+
+    .service-detail-copy > p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .service-hero-buttons {
+        justify-content: center;
+    }
+
+
+    .showcase-3d {
+        margin: auto;
+
+        width: 600px;
+
+        max-width: 100%;
+
+        height: 550px;
+    }
+
+
+    .service-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .detail-item {
+        grid-template-columns:
+            50px 50px 1fr auto;
+
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .service-detail-hero {
+        padding: 60px 6vw 80px;
+    }
+
+
+    .service-detail-copy h1 {
+        font-size: 60px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .service-hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .service-hero-buttons .btn-main,
+    .service-hero-buttons .btn-outline {
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .showcase-3d {
+        width: 330px;
+
+        height: 400px;
+    }
+
+
+    .showcase-book {
+        width: 160px;
+
+        height: 230px;
+
+        left: 30%;
+
+        top: 20%;
+    }
+
+
+    .book-pages-3d {
+        width: 150px;
+
+        height: 215px;
+    }
+
+
+    .book-spine {
+        height: 230px;
+
+        width: 35px;
+    }
+
+
+    .book-name {
+        font-size: 22px;
+    }
+
+
+    .book-logo {
+        width: 30px;
+
+        height: 30px;
+    }
+
+
+    .spiral-object {
+        width: 120px;
+
+        height: 170px;
+
+        left: 0;
+    }
+
+
+    .spiral-rings {
+        height: 130px;
+    }
+
+
+    .stamp-object-3d {
+        transform: scale(.7);
+
+        right: -2%;
+
+        bottom: 5%;
+    }
+
+
+    .banner-object-3d {
+        transform: scale(.7);
+
+        right: -5%;
+
+        top: 5%;
+    }
+
+
+    .all-services {
+        padding: 110px 6vw;
+    }
+
+
+    .service-heading h2 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .detail-item {
+        grid-template-columns: 35px 40px 1fr;
+
+        gap: 10px;
+
+        padding: 25px 0;
+    }
+
+
+    .detail-content h3 {
+        font-size: 21px;
+    }
+
+
+    .detail-button {
+        grid-column: 3;
+
+        justify-self: start;
+
+        margin-top: 10px;
+    }
+
+
+    .service-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 90px 6vw;
+    }
+
+
+    .service-cta h2 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+}

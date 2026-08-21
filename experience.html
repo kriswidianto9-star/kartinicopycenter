@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>3D Catalog — Kartini Copy Center</title>
+
+    <meta
+        name="description"
+        content="Jelajahi layanan Kartini Copy Center melalui katalog 3D interaktif."
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/experience.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================== -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <img
+            src="assets/images/logo-kartini.png"
+            alt="Kartini Copy Center"
+        >
+    </a>
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Beranda
+        </a>
+
+        <a href="katalog.html">
+            Katalog
+        </a>
+
+        <a href="layanan.html">
+            Layanan
+        </a>
+
+        <a href="experience.html">
+            3D Experience
+        </a>
+
+        <a href="kontak.html">
+            Kontak
+        </a>
+
+    </nav>
+
+    <a
+        href="https://wa.me/6281155555379?text=Halo%20Kartini%20Copy%20Center%2C%20saya%20ingin%20bertanya%20tentang%20layanan."
+        target="_blank"
+        rel="noopener"
+        class="nav-whatsapp"
+    >
+        WhatsApp
+        <span>↗</span>
+    </a>
+
+</header>
+
+<main>
+
+
+<!-- =========================
+     INTRO
+========================== -->
+
+<section class="interactive-intro">
+
+    <div class="eyebrow">
+        KARTINI 3D CATALOG
+    </div>
+
+
+    <h1>
+
+        Pilih.
+        <span>
+            Putar.
+        </span>
+
+        Pesan.
+
+    </h1>
+
+
+    <p>
+
+        Jelajahi layanan Kartini Copy Center
+        melalui objek 3D interaktif.
+
+        <br>
+
+        Pilih kategori di bawah untuk melihat
+        detailnya.
+
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     INTERACTIVE CATALOG
+========================== -->
+
+<section class="interactive-catalog">
+
+
+    <!-- LEFT / CATEGORY -->
+
+    <aside class="catalog-sidebar">
+
+        <div class="catalog-label">
+            PILIH LAYANAN
+        </div>
+
+
+        <button
+            class="catalog-item active"
+            data-type="book"
+        >
+
+            <span>
+                01
+            </span>
+
+            <strong>
+                Cetak Buku
+            </strong>
+
+            <b>
+                ↗
+            </b>
+
+        </button>
+
+
+        <button
+            class="catalog-item"
+            data-type="spiral"
+        >
+
+            <span>
+                02
+            </span>
+
+            <strong>
+                Jilid Spiral
+            </strong>
+
+            <b>
+                ↗
+            </b>
+
+        </button>
+
+
+        <button
+            class="catalog-item"
+            data-type="banner"
+        >
+
+            <span>
+                03
+            </span>
+
+            <strong>
+                Banner & Spanduk
+            </strong>
+
+            <b>
+                ↗
+            </b>
+
+        </button>
+
+
+        <button
+            class="catalog-item"
+            data-type="stamp"
+        >
+
+            <span>
+                04
+            </span>
+
+            <strong>
+                Stempel
+            </strong>
+
+            <b>
+                ↗
+            </b>
+
+        </button>
+
+
+        <div class="catalog-help">
+
+            <span>
+                TIP
+            </span>
+
+            <p>
+                Drag objek 3D
+                menggunakan mouse
+                untuk memutarnya.
+            </p>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- CENTER / 3D -->
+
+    <div
+        class="interactive-view"
+        id="interactive-canvas"
+    >
+
+        <div class="object-loading">
+
+            <span></span>
+
+            MEMUAT 3D
+
+        </div>
+
+
+        <div class="object-counter">
+
+            01
+            <span>/ 04</span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- RIGHT / INFO -->
+
+    <div class="catalog-information">
+
+
+        <div class="catalog-category">
+
+            CETAK & PERCETAKAN
+
+        </div>
+
+
+        <h2 id="catalog-title">
+
+            Cetak
+            <span>
+                Buku.
+            </span>
+
+        </h2>
+
+
+        <p
+            id="catalog-description"
+            class="catalog-description"
+        >
+
+            Cetak buku hardcover,
+            softcover, buku Yasin,
+            dan berbagai kebutuhan
+            dokumen.
+
+        </p>
+
+
+        <div class="catalog-features">
+
+            <div>
+
+                <span>
+                    01
+                </span>
+
+                <p>
+                    Hardcover
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    02
+                </span>
+
+                <p>
+                    Softcover
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    03
+                </span>
+
+                <p>
+                    Buku Yasin
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a
+            id="catalog-whatsapp"
+            href="https://wa.me/6281155555379"
+            target="_blank"
+            class="catalog-whatsapp"
+        >
+
+            <span>
+                Pesan via WhatsApp
+            </span>
+
+            <b>
+                ↗
+            </b>
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     BOTTOM MARQUEE
+========================== -->
+
+<section class="catalog-marquee">
+
+    <div>
+
+        FOTOCOPY
+
+        <span>✦</span>
+
+        PRINTING
+
+        <span>✦</span>
+
+        JILID
+
+        <span>✦</span>
+
+        BANNER
+
+        <span>✦</span>
+
+        STIKER
+
+        <span>✦</span>
+
+        STEMPEL
+
+        <span>✦</span>
+
+        ATK
+
+        <span>✦</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FINAL CTA
+========================== -->
+
+<section class="experience-final">
+
+    <div>
+
+        <div class="eyebrow">
+            KARTINI COPY CENTER
+        </div>
+
+
+        <h2>
+
+            Sudah tahu
+            <span>
+                mau cetak apa?
+            </span>
+
+        </h2>
+
+    </div>
+
+
+    <a
+        href="https://wa.me/6281155555379?text=Halo%20Kartini%20Copy%20Center%2C%20saya%20ingin%20memesan."
+        target="_blank"
+        class="experience-final-button"
+    >
+
+        WhatsApp Kartini
+
+        <span>
+            ↗
+        </span>
+
+    </a>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <img
+                src="assets/images/logo-kartini.png"
+                alt="Kartini Copy Center"
+            >
+
+            <p>
+                Fotocopy • Printing • Jilid
+                <br>
+                Percetakan • ATK
+            </p>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <div>
+
+                <small>
+                    TELEPON / WHATSAPP
+                </small>
+
+                <a href="https://wa.me/6281155555379">
+                    0811 5555 5379
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <small>
+                    JAM BUKA
+                </small>
+
+                <p>
+                    07.00 — 00.00
+                    <br>
+                    Setiap Hari
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <small>
+                    ALAMAT
+                </small>
+
+                <p>
+                    Jl. Perjuangan No.59,
+                    <br>
+                    Sempaja Selatan,
+                    <br>
+                    Samarinda Utara
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Kartini Copy Center
+        </span>
+
+        <span>
+            Samarinda, Kalimantan Timur
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- THREE.JS -->
+
+<script type="importmap">
+{
+    "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+}
+</script>
+
+
+<script
+    type="module"
+    src="js/experience.js"
+></script>
+
+<script src="js/main.js"></script><script src="js/main.js"></script>
+
+<script
+    type="module"
+    src="js/experience.js"
+></script>
+</body>
+
+</html>

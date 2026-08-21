@@ -1,0 +1,1049 @@
+/* =================================
+   CONTACT HERO
+================================= */
+
+.contact-hero {
+
+    min-height: 700px;
+
+    padding: 100px 8vw;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr .85fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+
+.contact-intro {
+
+    animation: contactReveal .8s ease both;
+
+}
+
+
+@keyframes contactReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+.contact-intro h1 {
+
+    margin-top: 25px;
+
+    font-family: "Space Grotesk";
+
+    font-size: clamp(75px, 10vw, 145px);
+
+    line-height: .8;
+
+    letter-spacing: -8px;
+
+    font-weight: 600;
+
+}
+
+
+.contact-intro h1 span {
+
+    display: block;
+
+    color: #777;
+
+}
+
+
+.contact-intro > p {
+
+    max-width: 520px;
+
+    margin-top: 40px;
+
+    color: #777;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+
+}
+
+
+/* =================================
+   CONTACT ACTIONS
+================================= */
+
+.contact-actions {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    max-width: 470px;
+
+}
+
+
+.contact-whatsapp {
+
+    display: grid;
+
+    grid-template-columns: 50px 1fr 35px;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px 20px;
+
+    background: #171717;
+
+    color: white;
+
+    border-radius: 4px;
+
+    transition: .35s;
+
+}
+
+
+.contact-whatsapp:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.18);
+
+}
+
+
+.wa-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: 1px solid #555;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+}
+
+
+.contact-whatsapp small {
+
+    display: block;
+
+    color: #888;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.contact-whatsapp b {
+
+    font-size: 20px;
+
+    text-align: right;
+
+}
+
+
+.contact-map-button {
+
+    padding: 18px 20px;
+
+    border: 1px solid #aaa;
+
+    text-align: center;
+
+    transition: .3s;
+
+}
+
+
+.contact-map-button:hover {
+
+    background: #171717;
+
+    color: white;
+
+    border-color: #171717;
+
+}
+
+
+/* =================================
+   INFO CARD
+================================= */
+
+.contact-info-card {
+
+    padding: 35px;
+
+    background: #e5e1d8;
+
+    box-shadow:
+        20px 25px 60px rgba(0,0,0,.08);
+
+    animation:
+        contactCardReveal .9s .15s ease both;
+
+}
+
+
+@keyframes contactCardReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            rotate(2deg);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+    }
+
+}
+
+
+.open-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.status-dot {
+
+    width: 12px;
+
+    height: 12px;
+
+    background: #43a047;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 7px rgba(67,160,71,.1);
+
+    animation:
+        statusPulse 2s infinite;
+
+}
+
+
+@keyframes statusPulse {
+
+    0% {
+
+        box-shadow:
+            0 0 0 0 rgba(67,160,71,.3);
+
+    }
+
+    70% {
+
+        box-shadow:
+            0 0 0 9px rgba(67,160,71,0);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 0 rgba(67,160,71,0);
+
+    }
+
+}
+
+
+.open-status strong {
+
+    display: block;
+
+    font-family: "Space Grotesk";
+
+    font-size: 14px;
+
+}
+
+
+.open-status small {
+
+    display: block;
+
+    color: #777;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+
+}
+
+
+.info-divider {
+
+    height: 1px;
+
+    background: #c7c2b8;
+
+    margin: 30px 0;
+
+}
+
+
+.info-row {
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 20px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #ccc7bd;
+
+    font-size: 13px;
+
+}
+
+
+.info-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.info-label {
+
+    color: #888;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.info-row a {
+
+    font-family: "Space Grotesk";
+
+    font-weight: 600;
+
+}
+
+
+.info-row a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+.address-row {
+
+    line-height: 1.7;
+
+}
+
+
+/* =================================
+   MAP
+================================= */
+
+.map-section {
+
+    padding: 100px 8vw 150px;
+
+}
+
+
+.map-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 50px;
+
+    margin-bottom: 50px;
+
+}
+
+
+.map-heading h2 {
+
+    margin-top: 20px;
+
+    font-family: "Space Grotesk";
+
+    font-size: clamp(60px, 8vw, 105px);
+
+    line-height: .85;
+
+    letter-spacing: -6px;
+
+}
+
+
+.map-heading h2 span {
+
+    display: block;
+
+    color: #777;
+
+}
+
+
+.map-heading p {
+
+    max-width: 240px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+/* MAP CONTAINER */
+
+.map-wrapper {
+
+    position: relative;
+
+    height: 570px;
+
+    overflow: hidden;
+
+    background: #d7d3ca;
+
+}
+
+
+.map-wrapper iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+
+    filter:
+        grayscale(100%)
+        contrast(90%);
+
+    transition:
+        filter .5s;
+
+}
+
+
+.map-wrapper:hover iframe {
+
+    filter:
+        grayscale(30%)
+        contrast(95%);
+
+}
+
+
+/* MAP CARD */
+
+.map-overlay-card {
+
+    position: absolute;
+
+    left: 30px;
+
+    bottom: 30px;
+
+    display: grid;
+
+    grid-template-columns: 45px 1fr 40px;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-width: 330px;
+
+    padding: 16px;
+
+    background: rgba(245,243,238,.95);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+.map-pin {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid #aaa;
+
+    border-radius: 50%;
+
+    font-size: 14px;
+
+}
+
+
+.map-overlay-card strong {
+
+    display: block;
+
+    font-family: "Space Grotesk";
+
+    font-size: 13px;
+
+}
+
+
+.map-overlay-card span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #777;
+
+    font-size: 10px;
+
+}
+
+
+.map-overlay-card a {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #171717;
+
+    color: white;
+
+    border-radius: 50%;
+
+    transition: .3s;
+
+}
+
+
+.map-overlay-card a:hover {
+
+    transform: rotate(45deg);
+
+}
+
+
+/* =================================
+   CONTACT OPTIONS
+================================= */
+
+.contact-options {
+
+    padding: 120px 8vw;
+
+    background: #dedad1;
+
+    display: grid;
+
+    grid-template-columns: .7fr 1.3fr;
+
+    gap: 80px;
+
+}
+
+
+.options-title h2 {
+
+    margin-top: 20px;
+
+    font-family: "Space Grotesk";
+
+    font-size: clamp(50px, 6vw, 80px);
+
+    line-height: .9;
+
+    letter-spacing: -5px;
+
+}
+
+
+.options-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.option-card {
+
+    min-height: 370px;
+
+    padding: 25px;
+
+    background: #f3f1eb;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: .4s;
+
+}
+
+
+.option-card:hover {
+
+    transform:
+        translateY(-10px)
+        rotate(-1deg);
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,.1);
+
+}
+
+
+.option-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #999;
+
+    font-size: 10px;
+
+}
+
+
+.option-top b {
+
+    color: #222;
+
+    font-size: 17px;
+
+}
+
+
+.option-icon {
+
+    margin-top: 50px;
+
+    width: 55px;
+
+    height: 55px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 1px solid #aaa;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+}
+
+
+.option-card h3 {
+
+    margin-top: 30px;
+
+    font-family: "Space Grotesk";
+
+    font-size: 25px;
+
+}
+
+
+.option-card p {
+
+    margin-top: 10px;
+
+    color: #777;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+}
+
+
+.option-link {
+
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    font-family: "Space Grotesk";
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+/* =================================
+   FINAL CTA
+================================= */
+
+.contact-final {
+
+    min-height: 450px;
+
+    padding: 100px 8vw;
+
+    background: #171717;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+}
+
+
+.contact-final h2 {
+
+    margin-top: 20px;
+
+    font-family: "Space Grotesk";
+
+    font-size: clamp(60px, 8vw, 110px);
+
+    line-height: .82;
+
+    letter-spacing: -6px;
+
+}
+
+
+.contact-final h2 span {
+
+    display: block;
+
+    color: #777;
+
+}
+
+
+.final-wa {
+
+    min-width: 220px;
+
+    height: 220px;
+
+    border: 1px solid #555;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    transition: .5s;
+
+}
+
+
+.final-wa b {
+
+    font-size: 25px;
+
+    transition: .3s;
+
+}
+
+
+.final-wa:hover {
+
+    background: white;
+
+    color: #171717;
+
+    transform:
+        rotate(8deg)
+        scale(1.05);
+
+}
+
+
+.final-wa:hover b {
+
+    transform:
+        translate(5px,-5px);
+
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1000px) {
+
+    .contact-hero {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+    }
+
+
+    .contact-intro {
+
+        text-align: center;
+
+    }
+
+
+    .contact-intro > p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .contact-actions {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .map-heading {
+
+        align-items: start;
+
+        flex-direction: column;
+
+    }
+
+
+    .contact-options {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .contact-hero {
+
+        padding:
+            70px 6vw
+            100px;
+
+    }
+
+
+    .contact-intro h1 {
+
+        font-size: 75px;
+
+        letter-spacing: -5px;
+
+    }
+
+
+    .contact-info-card {
+
+        padding: 25px;
+
+    }
+
+
+    .map-section {
+
+        padding:
+            80px 6vw
+            100px;
+
+    }
+
+
+    .map-heading h2 {
+
+        font-size: 60px;
+
+        letter-spacing: -4px;
+
+    }
+
+
+    .map-wrapper {
+
+        height: 480px;
+
+    }
+
+
+    .map-overlay-card {
+
+        left: 15px;
+
+        right: 15px;
+
+        bottom: 15px;
+
+        min-width: 0;
+
+        grid-template-columns:
+            40px 1fr 35px;
+
+    }
+
+
+    .contact-options {
+
+        padding: 90px 6vw;
+
+    }
+
+
+    .options-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .option-card {
+
+        min-height: 300px;
+
+    }
+
+
+    .contact-final {
+
+        min-height: 550px;
+
+        padding: 80px 6vw;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .contact-final h2 {
+
+        font-size: 65px;
+
+        letter-spacing: -4px;
+
+    }
+
+
+    .final-wa {
+
+        width: 170px;
+
+        height: 170px;
+
+        min-width: 170px;
+
+    }
+
+}

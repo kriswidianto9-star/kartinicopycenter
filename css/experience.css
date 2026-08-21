@@ -1,0 +1,775 @@
+/* =================================
+   INTRO
+================================= */
+
+.interactive-intro {
+
+    min-height: 560px;
+
+    padding:
+        110px 8vw
+        70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.interactive-intro h1 {
+
+    margin-top: 25px;
+
+    font-family: "Space Grotesk";
+
+    font-size:
+        clamp(80px, 12vw, 165px);
+
+    line-height: .75;
+
+    letter-spacing: -10px;
+
+}
+
+
+.interactive-intro h1 span {
+
+    color: #777;
+
+}
+
+
+.interactive-intro p {
+
+    margin-top: 45px;
+
+    max-width: 480px;
+
+    color: #777;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+}
+
+
+/* =================================
+   CATALOG
+================================= */
+
+.interactive-catalog {
+
+    min-height: 760px;
+
+    display: grid;
+
+    grid-template-columns:
+        250px
+        1fr
+        330px;
+
+    background: #d8d4cb;
+
+    border-top:
+        1px solid #c1bdb4;
+
+    border-bottom:
+        1px solid #c1bdb4;
+
+}
+
+
+/* =================================
+   SIDEBAR
+================================= */
+
+.catalog-sidebar {
+
+    padding: 35px 25px;
+
+    border-right:
+        1px solid #bdb9b0;
+
+}
+
+
+.catalog-label {
+
+    margin-bottom: 25px;
+
+    font-family: "Space Grotesk";
+
+    color: #888;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.catalog-item {
+
+    width: 100%;
+
+    padding: 18px 5px;
+
+    background: transparent;
+
+    border: none;
+
+    border-bottom:
+        1px solid #bdb9b0;
+
+    display: grid;
+
+    grid-template-columns:
+        28px 1fr 20px;
+
+    align-items: center;
+
+    gap: 8px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: .35s;
+
+}
+
+
+.catalog-item span {
+
+    color: #999;
+
+    font-size: 9px;
+
+}
+
+
+.catalog-item strong {
+
+    font-family: "Space Grotesk";
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.catalog-item b {
+
+    opacity: 0;
+
+    transition: .3s;
+
+}
+
+
+.catalog-item:hover,
+.catalog-item.active {
+
+    padding-left: 12px;
+
+    background: #ece9e2;
+
+}
+
+
+.catalog-item.active b,
+.catalog-item:hover b {
+
+    opacity: 1;
+
+}
+
+
+.catalog-help {
+
+    margin-top: 100px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid #bdb9b0;
+
+}
+
+
+.catalog-help span {
+
+    color: #999;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.catalog-help p {
+
+    margin-top: 10px;
+
+    color: #777;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =================================
+   3D VIEW
+================================= */
+
+.interactive-view {
+
+    position: relative;
+
+    min-height: 760px;
+
+    overflow: hidden;
+
+    cursor: grab;
+
+}
+
+
+.interactive-view:active {
+
+    cursor: grabbing;
+
+}
+
+
+.interactive-view canvas {
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    display: block;
+
+}
+
+
+.object-counter {
+
+    position: absolute;
+
+    right: 30px;
+
+    top: 30px;
+
+    font-family: "Space Grotesk";
+
+    font-size: 12px;
+
+    z-index: 5;
+
+}
+
+
+.object-counter span {
+
+    color: #999;
+
+}
+
+
+.object-loading {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    font-family: "Space Grotesk";
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    z-index: 0;
+
+    color: #999;
+
+}
+
+
+.object-loading span {
+
+    width: 7px;
+
+    height: 7px;
+
+    margin-right: 8px;
+
+    display: inline-block;
+
+    background: #777;
+
+    border-radius: 50%;
+
+    animation:
+        loadingPulse 1s infinite;
+
+}
+
+
+@keyframes loadingPulse {
+
+    50% {
+
+        opacity: .2;
+
+    }
+
+}
+
+
+/* =================================
+   INFORMATION
+================================= */
+
+.catalog-information {
+
+    padding:
+        80px 40px;
+
+    background: #eeeae2;
+
+    border-left:
+        1px solid #c1bdb4;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.catalog-category {
+
+    color: #999;
+
+    font-family: "Space Grotesk";
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.catalog-information h2 {
+
+    margin-top: 25px;
+
+    font-family: "Space Grotesk";
+
+    font-size: 65px;
+
+    line-height: .8;
+
+    letter-spacing: -5px;
+
+}
+
+
+.catalog-information h2 span {
+
+    display: block;
+
+    color: #777;
+
+}
+
+
+.catalog-description {
+
+    margin-top: 30px;
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+.catalog-features {
+
+    margin-top: 40px;
+
+    border-top:
+        1px solid #ccc7be;
+
+}
+
+
+.catalog-features div {
+
+    display: grid;
+
+    grid-template-columns:
+        35px 1fr;
+
+    padding: 13px 0;
+
+    border-bottom:
+        1px solid #ccc7be;
+
+}
+
+
+.catalog-features span {
+
+    color: #999;
+
+    font-size: 9px;
+
+}
+
+
+.catalog-features p {
+
+    font-size: 11px;
+
+}
+
+
+.catalog-whatsapp {
+
+    margin-top: auto;
+
+    padding: 17px;
+
+    background: #171717;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-family: "Space Grotesk";
+
+    font-size: 10px;
+
+    transition: .35s;
+
+}
+
+
+.catalog-whatsapp:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.15);
+
+}
+
+
+/* =================================
+   MARQUEE
+================================= */
+
+.catalog-marquee {
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    padding: 20px 0;
+
+    background: #171717;
+
+    color: white;
+
+}
+
+
+.catalog-marquee div {
+
+    display: inline-block;
+
+    font-family: "Space Grotesk";
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    animation:
+        marquee 25s linear infinite;
+
+}
+
+
+.catalog-marquee span {
+
+    margin:
+        0 30px;
+
+    color: #777;
+
+}
+
+
+@keyframes marquee {
+
+    from {
+
+        transform:
+            translateX(0);
+
+    }
+
+    to {
+
+        transform:
+            translateX(-50%);
+
+    }
+
+}
+
+
+/* =================================
+   FINAL CTA
+================================= */
+
+.experience-final {
+
+    min-height: 500px;
+
+    padding:
+        100px 8vw;
+
+    background: #171717;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+}
+
+
+.experience-final h2 {
+
+    margin-top: 25px;
+
+    font-family: "Space Grotesk";
+
+    font-size:
+        clamp(60px, 8vw, 110px);
+
+    line-height: .82;
+
+    letter-spacing: -7px;
+
+}
+
+
+.experience-final h2 span {
+
+    display: block;
+
+    color: #777;
+
+}
+
+
+.experience-final-button {
+
+    width: 210px;
+
+    height: 210px;
+
+    border:
+        1px solid #555;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    transition: .5s;
+
+}
+
+
+.experience-final-button span {
+
+    font-size: 24px;
+
+}
+
+
+.experience-final-button:hover {
+
+    background: white;
+
+    color: #171717;
+
+    transform:
+        rotate(8deg)
+        scale(1.05);
+
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1050px) {
+
+    .interactive-catalog {
+
+        grid-template-columns:
+            200px
+            1fr
+            280px;
+
+    }
+
+
+    .catalog-information {
+
+        padding: 60px 25px;
+
+    }
+
+
+    .catalog-information h2 {
+
+        font-size: 50px;
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .interactive-intro {
+
+        padding:
+            80px 6vw;
+
+    }
+
+
+    .interactive-intro h1 {
+
+        font-size: 75px;
+
+        letter-spacing: -5px;
+
+    }
+
+
+    .interactive-catalog {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .catalog-sidebar {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid #bdb9b0;
+
+        padding: 25px;
+
+    }
+
+
+    .catalog-item {
+
+        display: flex;
+
+        justify-content: space-between;
+
+    }
+
+
+    .catalog-help {
+
+        display: none;
+
+    }
+
+
+    .interactive-view {
+
+        min-height: 500px;
+
+    }
+
+
+    .catalog-information {
+
+        border-left: none;
+
+        border-top:
+            1px solid #c1bdb4;
+
+        min-height: 500px;
+
+    }
+
+
+    .catalog-information h2 {
+
+        font-size: 60px;
+
+    }
+
+
+    .experience-final {
+
+        padding:
+            80px 6vw;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
